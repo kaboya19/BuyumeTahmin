@@ -155,7 +155,7 @@ if page=="Çeyreklik Tahmin":
             mode='lines',
             fill='tonexty',  # Alt ve üst arasında dolgu
             fillcolor='rgba(128, 0, 128, 0.3)',  # Mor renk (%30 saydamlık)
-            line=dict(color='rgba(0,0,0,0)'),  # Çizgi görünmez
+            line=dict(color='rgba(1,1,1,1)'),  # Çizgi görünmez
             name='Güven Aralığı'
         ))
         fig1.update_traces(line=dict(width=5)) 

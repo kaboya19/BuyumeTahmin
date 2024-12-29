@@ -153,9 +153,9 @@ if page=="Çeyreklik Tahmin":
             x=cari.index,
             y=cari["Alt"],
             mode='lines',
-            fill='tonexty',  # Fill between this trace and the previous one
-            fillcolor='purple',  # Semi-transparent orange color
-            line=dict(color='rgba(0,0,0,0)'),
+            fill='tonexty',  # Alt ve üst arasında dolgu
+            fillcolor='rgba(128, 0, 128, 0.3)',  # Mor renk (%30 saydamlık)
+            line=dict(color='rgba(0,0,0,0)'),  # Çizgi görünmez
             name='Güven Aralığı'
         ))
         fig1.update_traces(line=dict(width=5)) 

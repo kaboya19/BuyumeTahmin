@@ -1,0 +1,14 @@
+plotly==5.18.0
+streamlit>=1.9.2
+ipywidgets>=7.0.0
+matplotlib==3.9.0
+quantstats==0.0.62
+pandas==2.2.2
+keras==3.7.0
+evds
+requests
+scikit-learn
+selenium
+webdriver-manager
+openpyxl
+tensorflow

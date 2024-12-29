@@ -215,6 +215,24 @@ if page=="Yıllık Tahmin":
         unsafe_allow_html=True
     )
 
+    st.markdown(
+        """
+        <style>
+            /* Ana başlık stili */
+            .main-title {
+                font-size: 12px; /* Yazı boyutunu büyüt */
+                font-weight: bold; /* Kalın yazı */
+                color: black; /* Yazı rengi siyah */
+                text-align: center; /* Ortala */
+                margin-top: 20px; /* Üst boşluk */
+                margin-bottom: 20px; /* Alt boşluk */
+            }
+        </style>
+        <h1 class="main-title">*Mevsim ve takvim etkilerinden arındırılmıştır.</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 
     def tarih_ceyrek(tarih):

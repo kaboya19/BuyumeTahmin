@@ -154,8 +154,8 @@ if page=="Çeyreklik Tahmin":
             y=cari["Alt"],
             mode='lines',
             fill='tonexty',  # Fill between this trace and the previous one
-            fillcolor='rgba(255,165,1,0.3)',  # Semi-transparent orange color
-            line=dict(color='rgba(1,1,1,1)'),
+            fillcolor='rgba(166,0,255,0.3)',  # Semi-transparent orange color
+            line=dict(color='rgba(0,0,0,0)'),
             name='Güven Aralığı'
         ))
         fig1.update_traces(line=dict(width=5)) 

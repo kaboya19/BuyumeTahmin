@@ -221,7 +221,6 @@ if page=="Yıllık Tahmin":
             /* Ana başlık stili */
             .main-title {
                 font-size: 12px; /* Yazı boyutunu büyüt */
-                font-weight: bold; /* Kalın yazı */
                 color: black; /* Yazı rengi siyah */
                 text-align: center; /* Ortala */
                 margin-top: 20px; /* Üst boşluk */

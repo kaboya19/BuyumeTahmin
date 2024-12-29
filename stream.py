@@ -142,7 +142,7 @@ if page=="Çeyreklik Tahmin":
         )
         fig1.add_trace(go.Scatter(
             x=cari.index,
-            y=cari["Max"],
+            y=cari["Üst"],
             mode='lines',
             line=dict(color='rgba(1,1,1,1)'),
             showlegend=False
@@ -151,7 +151,7 @@ if page=="Çeyreklik Tahmin":
 
         fig1.add_trace(go.Scatter(
             x=cari.index,
-            y=cari["Min"],
+            y=cari["Alt"],
             mode='lines',
             fill='tonexty',  # Fill between this trace and the previous one
             fillcolor='rgba(255,165,1,0.3)',  # Semi-transparent orange color

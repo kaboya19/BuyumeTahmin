@@ -129,6 +129,25 @@ if page=="Çeyreklik Tahmin":
     fig1= go.Figure()
     if dark_mode_enabled:
         fig1.add_trace(go.Scatter(x=cari.index,y=cari["Tahmin"],mode='lines+markers',name="Tahmin",line=dict(color='red', width=6),marker=dict(size=8,color="white")))
+        fig1.add_trace(go.Scatter(
+            x=cari.index,
+            y=cari["Üst"],
+            mode='lines',
+            line=dict(color='rgba(1,1,1,1)'),
+            showlegend=False
+        ))
+        
+
+        fig1.add_trace(go.Scatter(
+            x=cari.index,
+            y=cari["Alt"],
+            mode='lines',
+            fill='tonexty',  # Fill between this trace and the previous one
+            fillcolor='rgba(255,165,1,0.3)',  # Semi-transparent orange color
+            line=dict(color='rgba(1,1,1,1)'),
+            name='Güven Aralığı'
+        ))
+        fig1.update_traces(line=dict(width=5)) 
         fig1.update_layout(
             xaxis=dict(
                 tickvals=cari.index,  # Original datetime index
@@ -140,25 +159,7 @@ if page=="Çeyreklik Tahmin":
             ),
             font=dict(family="Arial", size=14, color="white")
         )
-        fig1.add_trace(go.Scatter(
-            x=cari.index,
-            y=cari["Üst"],
-            mode='lines',
-            line=dict(color='rgba(1,1,1,1)'),
-            showlegend=False
-        ))
         st.plotly_chart(fig1)
-
-        fig1.add_trace(go.Scatter(
-            x=cari.index,
-            y=cari["Alt"],
-            mode='lines',
-            fill='tonexty',  # Alt ve üst arasında dolgu
-            fillcolor='rgba(128, 0, 128, 0.3)',  # Mor renk (%30 saydamlık)
-            line=dict(color='rgba(1,1,1,1)'),  # Çizgi görünmez
-            name='Güven Aralığı'
-        ))
-        fig1.update_traces(line=dict(width=5)) 
 
     else:
         fig1.add_trace(go.Scatter(x=cari.index,y=cari["Tahmin"],mode='lines+markers',name="Tahmin",line=dict(color='red', width=6),marker=dict(size=8,color="black")))

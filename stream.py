@@ -220,17 +220,18 @@ if page=="Yıllık Tahmin":
         <style>
             /* Ana başlık stili */
             .main-title {
-                font-size: 6px; /* Yazı boyutunu büyüt */
+                font-size: 4px; /* Yazı boyutunu küçült */
                 color: black; /* Yazı rengi siyah */
                 text-align: center; /* Ortala */
-                margin-top: 10px; /* Üst boşluk */
-                margin-bottom: 10px; /* Alt boşluk */
+                margin-top: 5px; /* Üst boşluk */
+                margin-bottom: 5px; /* Alt boşluk */
             }
         </style>
-        <h1 class="main-title">*Mevsim ve takvim etkilerinden arındırılmıştır.</h1>
+        <h3 class="main-title">*Mevsim ve takvim etkilerinden arındırılmıştır.</h3>
         """,
         unsafe_allow_html=True
     )
+
 
 
 

@@ -17,6 +17,8 @@ yıllık=pd.read_csv("yıllık.csv",index_col=0)
 yıllık=yıllık.loc["2023-09-30":]
 
 cariyıl=pd.read_csv("cariyıl.csv",index_col=0)
+gunluk=np.round(cari["Tahmin"].iloc[-1],2)
+yıl=np.round(yıllık["Tahmin"].iloc[-1],2)
 st.markdown(
     """
     <style>
@@ -31,6 +33,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True)
 if page=="Çeyreklik Tahmin":
+    tarih=datetime.today().strftime("%d.%m.%Y")
 
     st.markdown(
         """
@@ -47,6 +50,46 @@ if page=="Çeyreklik Tahmin":
         </style>
         <h1 class="main-title">Çeyreklik Büyüme Tahmini</h1>
         """,
+        unsafe_allow_html=True
+    )
+
+    if dark_mode_enabled:
+        st.markdown(
+        f'''
+        <div style="display: flex;">
+            <p class="inline-text white-text" style="margin-right: 1px;">Çeyreklik Büyüme Tahmini(4.Çeyrek)</p>
+            <p class="inline-text red-text">%{gunluk} ({tarih})</p>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
+        st.markdown(
+        f'''
+        <div style="display: flex;">
+            <p class="inline-text white-text" style="margin-right: 1px;">Yıllık Büyüme Tahmini(4.Çeyrek)</p>
+            <p class="inline-text red-text">%{yıl} ({tarih})</p>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
+        
+    else:
+        st.markdown(
+        f'''
+        <div style="display: flex;">
+            <p class="inline-text black-text" style="margin-right: 1px;">Aralık Ayı Enflasyon Tahmini:</p>
+            <p class="inline-text red-text">%{gunluk} ({tarih})</p>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
+        st.markdown(
+        f'''
+        <div style="display: flex;">
+            <p class="inline-text black-text" style="margin-right: 1px;">Yıllık Büyüme Tahmini(4.Çeyrek)</p>
+            <p class="inline-text red-text">%{yıl} ({tarih})</p>
+        </div>
+        ''',
         unsafe_allow_html=True
     )
 

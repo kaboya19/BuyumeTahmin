@@ -59,7 +59,7 @@ if page=="Çeyreklik Tahmin":
         <style>
             /* Özel stil ayarları */
             .black-text {
-                color: black;
+                color: white;
                 font-size: 24px;
                 font-weight: bold;
             }

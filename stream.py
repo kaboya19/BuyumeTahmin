@@ -95,7 +95,7 @@ if page=="Çeyreklik Tahmin":
         st.markdown(
         f'''
         <div style="display: flex;">
-            <p class="inline-text black-text" style="margin-right: 1px;">Aralık Ayı Enflasyon Tahmini:</p>
+            <p class="inline-text black-text" style="margin-right: 1px;">Çeyreklik Büyüme Tahmini(4.Çeyrek):</p>
             <p class="inline-text red-text">%{gunluk} ({tarih})</p>
         </div>
         ''',

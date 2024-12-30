@@ -75,6 +75,30 @@ if page=="Çeyreklik Tahmin":
         
     else:
         st.markdown(
+        """
+        <style>
+        .inline-text {
+            font-family: inherit; /* Varsayılan yazı tipini kullan */
+            font-size: inherit; /* Varsayılan boyutu kullan */
+        }
+        .black-text {
+            color: black; /* Siyah renk */
+        }
+        .large-link {
+            font-size: inherit; /* Varsayılan boyut */
+            font-family: inherit; /* Varsayılan yazı tipi */
+            color: black; /* Siyah renk */
+            text-decoration: none; /* Alt çizgi yok */
+        }
+        .large-link:hover {
+            text-decoration: underline; /* Üzerine gelince alt çizgi */
+        }
+        </style>
+        
+        """,
+        unsafe_allow_html=True
+    )
+        st.markdown(
         f'''
         <div style="display: flex;">
             <p class="inline-text black-text" style="margin-right: 1px;">Aralık Ayı Enflasyon Tahmini:</p>

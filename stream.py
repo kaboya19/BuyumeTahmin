@@ -77,24 +77,18 @@ if page=="Çeyreklik Tahmin":
         st.markdown(
         """
         <style>
-        .inline-text {
-            font-family: inherit; /* Varsayılan yazı tipini kullan */
-            font-size: inherit; /* Varsayılan boyutu kullan */
-        }
-        .black-text {
-            color: black; /* Siyah renk */
-        }
-        .large-link {
-            font-size: inherit; /* Varsayılan boyut */
-            font-family: inherit; /* Varsayılan yazı tipi */
-            color: black; /* Siyah renk */
-            text-decoration: none; /* Alt çizgi yok */
-        }
-        .large-link:hover {
-            text-decoration: underline; /* Üzerine gelince alt çizgi */
-        }
+            /* Özel stil ayarları */
+            .black-text {
+                color: black;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .red-text {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+            }
         </style>
-        
         """,
         unsafe_allow_html=True
     )

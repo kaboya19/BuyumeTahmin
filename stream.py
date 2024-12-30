@@ -19,6 +19,14 @@ yıllık=yıllık.loc["2023-09-30":]
 cariyıl=pd.read_csv("cariyıl.csv",index_col=0)
 gunluk=np.round(cari["Tahmin"].iloc[-1],2)
 yıl=np.round(yıllık["Tahmin"].iloc[-1],2)
+
+ham=pd.read_excel("veri3.xlsx",index_col=0)
+arındırılmış=pd.read_excel("veri2.xlsx",index_col=0)
+arındırılmış.loc["2024-12-31"]=((gunluk/100)+1)*arındırılmış.loc["2024-09-30"]
+
+ham_yıllık=(((arındırılmış.loc["2024-12-31"]/1.071)/ham.loc["2023-12-31"])-1)*100
+
+
 st.markdown(
     """
     <style>
@@ -122,8 +130,18 @@ if page=="Çeyreklik Tahmin":
         st.markdown(
         f'''
         <div style="display: flex;">
-            <p class="inline-text black-text" style="margin-right: 1px;">Yıllık Büyüme Tahmini(4.Çeyrek)</p>
+            <p class="inline-text black-text" style="margin-right: 1px;">Yıllık Büyüme Tahmini(4.Çeyrek,Mevsimsellikten Arındırılmış)</p>
             <p class="inline-text red-text">%{yıl} ({tarih})</p>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
+        
+        st.markdown(
+        f'''
+        <div style="display: flex;">
+            <p class="inline-text black-text" style="margin-right: 1px;">Yıllık Büyüme Tahmini(4.Çeyrek,Ham)</p>
+            <p class="inline-text red-text">%{ham_yıllık} ({tarih})</p>
         </div>
         ''',
         unsafe_allow_html=True

@@ -24,7 +24,9 @@ ham=pd.read_excel("veri3.xlsx",index_col=0)
 arındırılmış=pd.read_excel("veri2.xlsx",index_col=0)
 arındırılmış.loc["2024-12-31"]=((gunluk/100)+1)*arındırılmış.loc["2024-09-30"]
 
-ham_yıllık=(((arındırılmış.loc["2024-12-31"]/1.071)/ham.loc["2023-12-31"])-1)*100
+ham_yıllık=(((arındırılmış.loc["2024-12-31"]*1.071)/ham.loc["2023-12-31"])-1)*100
+ham_yıllık=ham_yıllık.values[0]
+ham_yıllık=np.round(ham_yıllık,2)
 
 
 st.markdown(

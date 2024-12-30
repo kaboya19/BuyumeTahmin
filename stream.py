@@ -55,6 +55,24 @@ if page=="Çeyreklik Tahmin":
 
     if dark_mode_enabled:
         st.markdown(
+        """
+        <style>
+            /* Özel stil ayarları */
+            .black-text {
+                color: black;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .red-text {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+        st.markdown(
         f'''
         <div style="display: flex;">
             <p class="inline-text white-text" style="margin-right: 1px;">Çeyreklik Büyüme Tahmini(4.Çeyrek)</p>
